@@ -48,4 +48,18 @@ public class SimpleInventory : IInventory
         var stack = stacks.Find(s => s.item == item);
         return stack?.amount ?? 0;
     }
+
+    public bool TryTakeAnyItem(out ItemData item)
+    {
+        if (stacks.Count == 0)
+        {
+            item = null;
+            return false;
+        }
+
+        var stack = stacks[0];
+        item = stack.item;
+        RemoveItem(item, 1);
+        return true;
+    }
 }

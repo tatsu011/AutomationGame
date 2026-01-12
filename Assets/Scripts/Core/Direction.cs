@@ -20,10 +20,10 @@ public static class DirectionExtensions
     {
         return dir switch
         {
-            Direction.Up => 90f,
-            Direction.Right => 0f,
-            Direction.Down => 270f,
-            Direction.Left => 180f,
+            Direction.Up => 0f,
+            Direction.Right => 90f,
+            Direction.Down => 180f,
+            Direction.Left => 270f,
             _ => 0f
         };
     }

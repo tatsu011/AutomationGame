@@ -3,7 +3,7 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerController2D : MonoBehaviour
 {
-    public float moveSpeed = 5f;
+    [SerializeField] float moveSpeed = 5f;
     private Rigidbody2D _rb;
     private Vector2 _input;
 
